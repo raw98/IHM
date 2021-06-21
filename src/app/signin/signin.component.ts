@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-signin',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./signin.component.scss']
 })
 export class SigninComponent implements OnInit {
+ngOnInit(){
 
-  constructor() { }
+}
+constructor(private route: ActivatedRoute,
+  private router: Router ){
 
-  ngOnInit(): void {
   }
-
+goto() {
+  this.router.navigate(['/compte', ]);
+}
 }
